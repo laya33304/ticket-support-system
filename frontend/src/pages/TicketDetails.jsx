@@ -147,8 +147,6 @@ const TicketDetails = () => {
   if (loading) {
     return (
       <>
-        <Navbar />
-
         <main className="container">
           <Loading />
         </main>
