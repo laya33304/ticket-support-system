@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = "https://ticket-support-system-l63v.onrender.com";
 
 const getToken = () => {
   return localStorage.getItem("token");
