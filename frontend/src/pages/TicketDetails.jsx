@@ -159,8 +159,6 @@ const TicketDetails = () => {
   if (error && !ticket) {
     return (
       <>
-        <Navbar />
-
         <main className="container">
           <p className="error">{error}</p>
         </main>
