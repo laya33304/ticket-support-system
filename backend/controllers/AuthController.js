@@ -7,7 +7,7 @@ const generateToken = require("../utils/generateToken");
 const register = async (req, res, next) => {
   try {
     // 1. Destructure 'role' out of the incoming request body
-    const { name, email, password, role } = req.body;
+    const { name, email, password } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({
@@ -30,7 +30,7 @@ const register = async (req, res, next) => {
     const passwordHash = await bcrypt.hash(password, 10);
 
     // 2. Set a default fallback role so it defaults to 'customer' if empty
-    const userRole = role || "customer";
+    const userRole = "customer";
 
     // 3. Changed 'customer' to ? and added userRole to the parameters array
     const [result] = await db.execute(
